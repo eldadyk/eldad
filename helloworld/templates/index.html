@@ -4,6 +4,12 @@
             <title>mylogger - {{ title }}</title>
         </head>
         <body>
-            <p>your address details are: {{ response }}</p>
+            <p>number of items: {{ counter }}</p>
+            <ul>
+            {% for item in response %}
+                <li>{{ item|safe }}</li>
+            {% endfor %}
+            </ul>
+            
         </body>
 </html>
